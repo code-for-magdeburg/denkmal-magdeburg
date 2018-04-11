@@ -1,2 +1,3 @@
-# history-of-your-house
-Get the Historical Context of Your House From the Monument Register (Denkmalverzeichnis).
+# Denkmal Magdeburg
+
+Show Momuments near your GPS Location (in Magdeburg). The data is provided by the Monument Register (Denkmalverzeichnis): <http://denkmalverzeichnis.magdeburg.de/>
