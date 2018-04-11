@@ -57,6 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
-databse.db
-scraper/history.csv
-scraper/history.json
+preprocess/databse.db
+preprocess/history.json
