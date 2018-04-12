@@ -12,7 +12,7 @@ jsonContent.results.forEach(x => {
   idLocation.push([id, lng, lat]);
   const data = JSON.stringify(x, null, "\t");
 
-  fs.writeFile(`../public/data/location/${id}.json`, data, err => {
+  fs.writeFile(`../public/data/location/${id}`, data, err => {
     if (err) return console.error(err);
     console.log("done");
   });
@@ -20,7 +20,7 @@ jsonContent.results.forEach(x => {
 
 const data = JSON.stringify(idLocation, null, "\t");
 
-fs.writeFile(`../public/data/index.json`, data, err => {
+fs.writeFile(`../src/locations.json`, data, err => {
   if (err) return console.error(err);
   console.log("done");
 });
