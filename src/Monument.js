@@ -38,7 +38,7 @@ class Monument extends Component {
       <div className="monument">
         {loading === false && (
           <div>
-            <img src={image} />
+            <img src={`data/images/${id}.jpg`} />
             <div>{objektbezeichnung}</div>
             <div>{description}</div>
             <div>{stadteil}</div>

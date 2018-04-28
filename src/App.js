@@ -80,13 +80,21 @@ class App extends Component {
 
   _renderWelcome = () => {
     return (
-      <div className="container">
+      <div className="container welcome">
         Wir zeigen dir die Denkmäler in deiner Umgebung. Dafür brauchen deine
-        genaue Position und werden dich danach fragen.<button
-          onClick={this._askForLocation}
-        >
-          Okay, los geht's!
-        </button>
+        genaue Position und werden dich danach fragen.
+        <br />
+        <br />
+        <div className="cta-wrapper">
+          <button className="cta" onClick={this._askForLocation}>
+            Okay, los geht's!
+          </button>
+        </div>
+        <br />
+        <small>
+          Diese Daten bleiben jedoch auf deinem Gerät und werden auf keinen
+          Server übertragen.
+        </small>
       </div>
     );
   };
@@ -100,7 +108,23 @@ class App extends Component {
           <h1>Denkmal Magdeburg</h1>
         </header>
         {order === null ? this._renderWelcome() : this._renderMonuments()}
-        <footer>Code for Magdeburg – Johannes Filter</footer>
+        <footer>
+          <a href="https://codefor.de/magdeburg/">Code for Magdeburg</a>
+          {" – "}
+          <a href="https://johannesfilter.com/">Johannes Filter</a>
+          <br />
+          <br />
+          Daten:{" "}
+          <a href="http://denkmalverzeichnis.magdeburg.de/">
+            Denkmalverzeichnis Magdeburg
+          </a>
+          <br />
+          <br />
+          Code:{" "}
+          <a href="https://github.com/code-for-magdeburg/denkmal-magdeburg">
+            auf GitHub
+          </a>
+        </footer>
       </div>
     );
   }

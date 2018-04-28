@@ -5,7 +5,6 @@
   max-width: 30rem;
   text-align: left;
   margin: 0 auto;
-  max-height: 40rem;
   overflow: scroll;
 }
 
@@ -18,11 +17,21 @@ body {
 }
 
 footer {
-  position: absolute;
-  bottom: 0%;
-  left: 0%;
+  border-top: 1px solid lightgrey;
+  margin: 0 auto;
+  max-width: 30rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
   text-align: center;
   display: block;
   width: 100%;
   margin-bottom: 2rem;
+}
+
+.welcome {
+  margin-bottom: 10rem;
+}
+
+.cta-wrapper {
+  text-align: center;
 }

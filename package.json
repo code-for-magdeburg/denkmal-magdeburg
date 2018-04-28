@@ -1,7 +1,9 @@
 {
   "name": "denkmal-magdeburg",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
+  "homepage": "https://vis.one/denkmal-magdeburg",
   "dependencies": {
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
