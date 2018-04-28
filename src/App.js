@@ -18,19 +18,16 @@ class App extends Component {
   componentDidMount() {}
 
   _askForLocation = () => {
-    console.log("navigator", navigator);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(this._updateUserLocation);
     } else console.error("error");
   };
 
   _updateUserLocation = position => {
-    console.log("position", position);
     const order = getLocationOrder(
       position.coords.latitude,
       position.coords.longitude
     );
-    console.log("order", order);
     this.setState({ order });
   };
 
@@ -38,6 +35,7 @@ class App extends Component {
 
   _prev = () => this.reactSwipe.prev();
 
+  // get new bunch of momuments
   _nextPage = () => {
     const { numMomumentToShow, startSlide } = this.state;
     if (this.reactSwipe.getPos() + 1 !== numMomumentToShow) return;
@@ -69,10 +67,10 @@ class App extends Component {
           ))}
         </ReactSwipe>
         <button type="button" onClick={this._prev}>
-          Prev
+          zurück
         </button>
         <button type="button" onClick={this._next}>
-          Next
+          nächste
         </button>
       </div>
     );
@@ -81,8 +79,8 @@ class App extends Component {
   _renderWelcome = () => {
     return (
       <div className="container welcome">
-        Wir zeigen dir die Denkmäler in deiner Umgebung. Dafür brauchen deine
-        genaue Position und werden dich danach fragen.
+        Wir zeigen dir Informationen zu Denkmälern in deiner Umgebung. Dafür
+        brauchen deine genaue Position und werden dich danach fragen.
         <br />
         <br />
         <div className="cta-wrapper">
@@ -95,12 +93,18 @@ class App extends Component {
           Diese Daten bleiben jedoch auf deinem Gerät und werden auf keinen
           Server übertragen.
         </small>
+        <br />
+        <br />
+        <small>
+          Es wird dir immer ein Denkmal angezeigt, du kannst aber nach rechts
+          swipen um das Nächste anzusehen. Oder auf dem Desktop-PC die Pfeile
+          benutzen.
+        </small>
       </div>
     );
   };
 
   render() {
-    console.log("state", this.state);
     const { order } = this.state;
     return (
       <div className="App">
