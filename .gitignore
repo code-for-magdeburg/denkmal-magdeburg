@@ -59,3 +59,5 @@ typings/
 
 preprocess/databse.db
 preprocess/history.json
+
+build
